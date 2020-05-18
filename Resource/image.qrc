@@ -1,2 +1,10 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/img">
+        <file>right.png</file>
+        <file>wrong.png</file>
+        <file>start.jpg</file>
+        <file>icon.png</file>
+        <file>icon.ico</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>

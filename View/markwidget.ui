@@ -1,21 +1,985 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author/>
- <comment/>
- <exportmacro/>
  <class>MarkWidget</class>
  <widget class="QWidget" name="MarkWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>640</width>
+    <height>720</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1080</width>
+    <height>1215</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="../Resource/image.qrc">
+    <normaloff>:/img/icon.png</normaloff>:/img/icon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	background-color: rgb(60, 60, 60);
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="2">
+    <widget class="QFrame" name="frame_4">
+     <property name="styleSheet">
+      <string notr="true">QFrame{
+	border: 0px;
+	border-radius: 5px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QScrollArea" name="scrollArea">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>124</width>
+           <height>646</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(80, 80, 80);
+border: 0px;
+border-radius: 5px;</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="4">
+    <widget class="QFrame" name="frame_2">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string>this{
+	background-color: rgb(60, 60, 60);
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label_Class1">
+        <property name="maximumSize">
+         <size>
+          <width>70</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑 Light</family>
+          <pointsize>22</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+	background-color: transparent;
+	color: rgb(255, 255, 255);
+}</string>
+        </property>
+        <property name="text">
+         <string>类型:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>100</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_Class2">
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑 Light</family>
+          <pointsize>22</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+	background-color: transparent;
+	color: rgb(255, 255, 255);
+}</string>
+        </property>
+        <property name="text">
+         <string>置信度：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>200</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_Class3_2">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑 Light</family>
+          <pointsize>22</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+	background-color: transparent;
+	color: rgb(255, 255, 255);
+}</string>
+        </property>
+        <property name="text">
+         <string>已标注:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QFrame" name="frame">
+     <property name="minimumSize">
+      <size>
+       <width>180</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string>this{
+	background-color: rgb(60, 60, 60);
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QRadioButton" name="btn_Type1">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>35</y>
+        <width>138</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑 Light</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QRadioButton{
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+}
+QRadioButton::indicator {
+    width:                  12px;
+    height:                 12px;
+    border-radius:          6px;
+	background-color: rgb(255, 255, 255);
+}
+ 
+QRadioButton::indicator:checked {
+	width: 8px;
+    height: 8px;
+	border-radius: 6px;
+	border: 2px solid white;
+    background-color: rgb(150, 150, 150);
+}</string>
+      </property>
+      <property name="text">
+       <string>功能性需求</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="btn_Type2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>97</y>
+        <width>162</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑 Light</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QRadioButton{
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+}
+QRadioButton::indicator {
+    width:                  12px;
+    height:                 12px;
+    border-radius:          6px;
+	background-color: rgb(255, 255, 255);
+}
+ 
+QRadioButton::indicator:checked {
+	width: 8px;
+    height: 8px;
+	border-radius: 6px;
+	border: 2px solid white;
+    background-color: rgb(150, 150, 150);
+}</string>
+      </property>
+      <property name="text">
+       <string>非功能性需求</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="btn_Type3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>159</y>
+        <width>60</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑 Light</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QRadioButton{
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+}
+QRadioButton::indicator {
+    width:                  12px;
+    height:                 12px;
+    border-radius:          6px;
+	background-color: rgb(255, 255, 255);
+}
+ 
+QRadioButton::indicator:checked {
+	width: 8px;
+    height: 8px;
+	border-radius: 6px;
+	border: 2px solid white;
+    background-color: rgb(150, 150, 150);
+}</string>
+      </property>
+      <property name="text">
+       <string>性能</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="btn_Type4">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>218</y>
+        <width>81</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑 Light</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QRadioButton{
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+}
+QRadioButton::indicator {
+    width:                  12px;
+    height:                 12px;
+    border-radius:          6px;
+	background-color: rgb(255, 255, 255);
+}
+ 
+QRadioButton::indicator:checked {
+	width: 8px;
+    height: 8px;
+	border-radius: 6px;
+	border: 2px solid white;
+    background-color: rgb(150, 150, 150);
+}</string>
+      </property>
+      <property name="text">
+       <string>兼容性</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="btn_Type5">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>277</y>
+        <width>81</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑 Light</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QRadioButton{
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+}
+QRadioButton::indicator {
+    width:                  12px;
+    height:                 12px;
+    border-radius:          6px;
+	background-color: rgb(255, 255, 255);
+}
+ 
+QRadioButton::indicator:checked {
+	width: 8px;
+    height: 8px;
+	border-radius: 6px;
+	border: 2px solid white;
+    background-color: rgb(150, 150, 150);
+}</string>
+      </property>
+      <property name="text">
+       <string>可用性</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="btn_Type8">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>454</y>
+        <width>102</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑 Light</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QRadioButton{
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+}
+QRadioButton::indicator {
+    width:                  12px;
+    height:                 12px;
+    border-radius:          6px;
+	background-color: rgb(255, 255, 255);
+}
+ 
+QRadioButton::indicator:checked {
+	width: 8px;
+    height: 8px;
+	border-radius: 6px;
+	border: 2px solid white;
+    background-color: rgb(150, 150, 150);
+}</string>
+      </property>
+      <property name="text">
+       <string>可维护性</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="btn_Type9">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>513</y>
+        <width>102</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑 Light</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QRadioButton{
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+}
+QRadioButton::indicator {
+    width:                  12px;
+    height:                 12px;
+    border-radius:          6px;
+	background-color: rgb(255, 255, 255);
+}
+ 
+QRadioButton::indicator:checked {
+	width: 8px;
+    height: 8px;
+	border-radius: 6px;
+	border: 2px solid white;
+    background-color: rgb(150, 150, 150);
+}</string>
+      </property>
+      <property name="text">
+       <string>可移植性</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="btn_Type10">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>572</y>
+        <width>66</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑 Light</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QRadioButton{
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+}
+QRadioButton::indicator {
+    width:                  12px;
+    height:                 12px;
+    border-radius:          6px;
+	background-color: rgb(255, 255, 255);
+}
+ 
+QRadioButton::indicator:checked {
+	width: 8px;
+    height: 8px;
+	border-radius: 6px;
+	border: 2px solid white;
+    background-color: rgb(150, 150, 150);
+}</string>
+      </property>
+      <property name="text">
+       <string>其它</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="btn_Type6">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>336</y>
+        <width>81</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑 Light</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QRadioButton{
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+}
+QRadioButton::indicator {
+    width:                  12px;
+    height:                 12px;
+    border-radius:          6px;
+	background-color: rgb(255, 255, 255);
+}
+ 
+QRadioButton::indicator:checked {
+	width: 8px;
+    height: 8px;
+	border-radius: 6px;
+	border: 2px solid white;
+    background-color: rgb(150, 150, 150);
+}</string>
+      </property>
+      <property name="text">
+       <string>可靠性</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="btn_Type7">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>395</y>
+        <width>81</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑 Light</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QRadioButton{
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+}
+QRadioButton::indicator {
+    width:                  12px;
+    height:                 12px;
+    border-radius:          6px;
+	background-color: rgb(255, 255, 255);
+}
+ 
+QRadioButton::indicator:checked {
+	width: 8px;
+    height: 8px;
+	border-radius: 6px;
+	border: 2px solid white;
+    background-color: rgb(150, 150, 150);
+}</string>
+      </property>
+      <property name="text">
+       <string>安全性</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QFrame" name="frame_3">
+     <property name="minimumSize">
+      <size>
+       <width>300</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string>this{
+	background-color: rgb(60, 60, 60);
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QFrame" name="frame_Rank">
+        <property name="styleSheet">
+         <string notr="true">QFrame{
+	background-color: transparent;
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QPushButton" name="btn_Star1">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="sizeIncrement">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	border-radius: 15px;
+	background-color: rgb(150, 150, 150);
+}
+QPushButton:flat{
+	background-color: rgb(255, 255, 255);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_Star2">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="sizeIncrement">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	border-radius: 15px;
+	background-color: rgb(150, 150, 150);
+}
+QPushButton:flat{
+	background-color: rgb(255, 255, 255);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_Star3">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="sizeIncrement">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	border-radius: 15px;
+	background-color: rgb(150, 150, 150);
+}
+QPushButton:flat{
+	background-color: rgb(255, 255, 255);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_Star4">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="sizeIncrement">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	border-radius: 15px;
+	background-color: rgb(150, 150, 150);
+}
+QPushButton:flat{
+	background-color: rgb(255, 255, 255);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_Star5">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="sizeIncrement">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	border-radius: 15px;
+	background-color: rgb(150, 150, 150);
+}
+QPushButton:flat{
+	background-color: rgb(255, 255, 255);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_Note">
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑 Light</family>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+}</string>
+        </property>
+        <property name="text">
+         <string>备注</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPlainTextEdit" name="plainTextEdit">
+        <property name="styleSheet">
+         <string notr="true">QPlainTextEdit{
+	background-color: rgb(80, 80, 80);
+	color: rgb(255, 255, 255);
+	border-radius:5px;
+}</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_Criterion">
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑 Light</family>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+}</string>
+        </property>
+        <property name="text">
+         <string>参考标准</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextBrowser" name="textBrowser_explain">
+        <property name="styleSheet">
+         <string notr="true">QTextBrowser{
+	background-color: rgb(80, 80, 80);
+	color: rgb(255, 255, 255);
+	border-radius:5px;
+}</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
  </widget>
- <pixmapfunction/>
+ <resources>
+  <include location="../Resource/image.qrc"/>
+ </resources>
  <connections/>
 </ui>
